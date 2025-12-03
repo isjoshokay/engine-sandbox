@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/engine_sandbox.dir/src/main.cpp.o -o engine_sandbox   -L/opt/homebrew/Cellar/sdl2/2.32.10/lib  -Wl,-rpath,/opt/homebrew/Cellar/sdl2/2.32.10/lib /opt/homebrew/Cellar/sdl2/2.32.10/lib/libSDL2.dylib
