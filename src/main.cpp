@@ -32,12 +32,12 @@ int main() {
         SDL_RENDERER_ACCELERATED // flag for hardware acceleration (if possible)
     );
     if (!renderer){ // rendering without a renderer is a harmful semi-alliterative phrase
-        std::cerr << "SDL_CreateRenderer failed: " << SDL_GetError() << std::endl;
+        std::cerr << "SDL_CreateRenderer failed: \n" << SDL_GetError();
         SDL_DestroyWindow(window);
         SDL_Quit();
         return 1;
     } else {
-        std::cout << "Renderering the renderation...";
+        std::cout << "Renderering the renderation...\n";
     }
 
     bool running = true;
