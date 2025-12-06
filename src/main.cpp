@@ -2,6 +2,8 @@
 #include <iostream>
 
 int main() {
+    const int windowWidth = 800;
+    const int windowHeight = 600;
     if (SDL_Init(SDL_INIT_VIDEO) != 0){ // video/windowing subsystem (0 means success)
         /*
         SDL_Init(SDL_INIT_VIDEO) is a fn for asking the OS which video backend to use (in this case on Mac--Metal)
@@ -15,7 +17,7 @@ int main() {
         "Josh's Engine Sandbox", // with the title
         SDL_WINDOWPOS_CENTERED, // where, but horizontally
         SDL_WINDOWPOS_CENTERED, // where, but vertically
-        800, 600, // window sizing in px
+        windowWidth, windowHeight, // window sizing in px
         SDL_WINDOW_SHOWN // bitwise flag
     );
     if (!window) { // err handling for window obj
@@ -56,8 +58,7 @@ int main() {
     float rectVX = 200.0f;
     float rectVY = 140.0f;
 
-    const int windowWidth = 800;
-    const int windowHeight = 600;
+    
     // delta time
     Uint32 lastTicks = SDL_GetTicks();
     while (running) { // main loop
